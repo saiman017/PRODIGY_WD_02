@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  background-color: #302d2e;
+  padding: 0.4rem 0.8rem;
+  transition: width 0.5s ease;
+}
+
+.sidebar.active {
+  width: 70px;
+}
+
+.sidebar #menubtn {
+  position: absolute;
+  color: #fff;
+  top: 0.4rem;
+  left: 90%;
+  font-size: 1.2rem;
+  line-height: 50px;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.sidebar.active #menubtn {
+  left: 50%;
+}
+
+.sidebar .top .logo {
+  color: white;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.sidebar.active .top .logo {
+  opacity: 0;
+}
+
+.top .logo i {
+  font-size: 2rem;
+  margin-right: 5px;
+}
+
+.sidebar ul li {
+  position: relative;
+  list-style: none;
+  height: 50px;
+  width: 90%;
+  margin: 0.8rem auto;
+  line-height: 50px;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.sidebar ul li a:hover {
+  background-color: white;
+  color: #12171e;
+}
+.sidebar ul li a i {
+  min-width: 42px;
+  text-align: center;
+  height: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+}
+
+.sidebar .nav-item {
+  opacity: 1;
+}
+
+.sidebar.sidebar.active .nav-item {
+  opacity: 0;
+}
+
+.sidebar ul li .tooltip {
+  position: absolute;
+  left: 115px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.8rem;
+  padding: 0.4rem 1.2rem;
+  line-height: 1.8rem;
+  z-index: 20;
+  opacity: 0;
+  background-color: white;
+  display: none;
+}
+
+.sidebar ul li:hover .tooltip {
+  opacity: 1;
+}
+
+.sidebar.sidebar.active ul li .tooltip {
+  display: block;
+}

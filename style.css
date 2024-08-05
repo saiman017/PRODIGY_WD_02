@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #221f20;
+  /* position: absolute; */
+}
+
+/* sa */
+.stopwatch {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  color: white;
+  padding: 20px;
+}
+
+.time-stamp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120px;
+  font-weight: 400;
+  margin: 20px 0px;
+  /* height: 40%; */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons .lap,
+.reset,
+.start,
+.pause {
+  margin: 0px 20px;
+}
+
+.buttons .lap,
+.reset,
+.start,
+.pause {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 0;
+  outline: 0;
+
+  font-size: 17px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons .lap {
+  color: rgb(255, 255, 255);
+  background-color: rgb(10, 10, 12);
+}
+.buttons .reset {
+  color: rgb(204, 60, 60);
+  background-color: rgb(114, 41, 41);
+}
+
+.buttons .start {
+  color: rgb(76, 239, 95);
+  background-color: rgb(37, 84, 29);
+}
+
+.buttons .pause {
+  color: rgb(76, 239, 95);
+  background-color: rgb(37, 84, 29);
+}
+
+.lapTracker {
+  margin: 10px 15px;
+}
+
+.lapTracker h4 {
+  font-size: 20px;
+}
+
+.lapContent {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 20px 0 20px;
+  font-size: 18px;
+}
+
+.lap-content {
+  overflow: auto;
+  height: 200px;
+}
+
+@media (max-width: 700px) {
+  .time-stamp {
+    font-size: 90px;
+  }
+
+  .buttons .lap,
+  .buttons .reset,
+  .buttons .start,
+  .buttons .pause {
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+  }
+}
